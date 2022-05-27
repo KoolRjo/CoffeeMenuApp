@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single"
+        android:id="@+id/group_appbar">
+        <item android:id="@+id/item_appbar_search"
+              android:icon="@drawable/ic_baseline_filter_list_24"
+              android:title="@string/title_filter_list"
+              app:showAsAction="always"/>
+    </group>
+</menu>

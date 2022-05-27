@@ -1,0 +1,78 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "f6ddc612b963741ee13fa84f24c062ec",
+    "entities": [
+      {
+        "tableName": "products",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`productID` INTEGER NOT NULL, `productNameVN` TEXT, `productNameEN` TEXT, `productPrice` INTEGER, `productImage` TEXT, PRIMARY KEY(`productID`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "productID",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nameVN",
+            "columnName": "productNameVN",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "nameEN",
+            "columnName": "productNameEN",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "price",
+            "columnName": "productPrice",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "image",
+            "columnName": "productImage",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "productID"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_products_productNameVN",
+            "unique": false,
+            "columnNames": [
+              "productNameVN"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_products_productNameVN` ON `${TABLE_NAME}` (`productNameVN`)"
+          },
+          {
+            "name": "index_products_productNameEN_productPrice",
+            "unique": false,
+            "columnNames": [
+              "productNameEN",
+              "productPrice"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_products_productNameEN_productPrice` ON `${TABLE_NAME}` (`productNameEN`, `productPrice`)"
+          }
+        ],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'f6ddc612b963741ee13fa84f24c062ec')"
+    ]
+  }
+}

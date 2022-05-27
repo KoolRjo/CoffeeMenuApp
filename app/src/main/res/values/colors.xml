@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="hint_color">#616161</color>
+    <color name="camel">#C6906C</color>
+    <color name="old_burgundy">#42342f</color>
+    <color name="scarlet">#F20C2D</color>
+    <color name="light_purple">#BB86FC</color>
+    <color name="shire_pink">#FEDBD0</color>
+    <color name="black">#000000</color>
+    --------------------Material Color--------------------
+</resources>

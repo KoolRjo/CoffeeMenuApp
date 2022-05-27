@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/layout_login"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayout_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/HintUsername"
+        android:textColorHint="@color/hint_color"
+        android:layout_above="@id/inputLayout_password"
+        android:layout_margin="5dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayout_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/HintPassword"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        app:errorEnabled="true"
+        app:counterEnabled="true"
+        app:counterMaxLength="8"
+        app:helperText="@string/HelpText"
+        app:helperTextTextColor="@color/hint_color"
+        app:passwordToggleEnabled="true">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            tools:ignore="TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/description_login_button"
+        android:text="@string/Login"
+        android:layout_below="@id/inputLayout_password"
+        android:layout_margin="5dp"
+        android:layout_alignEnd="@id/inputLayout_password"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputLayout_password"
+        android:layout_alignTop="@id/btn_login"
+        android:layout_marginEnd="12dp"
+        android:layout_toStartOf="@id/btn_login"
+        android:contentDescription="@string/description_signup_button"
+        android:text="@string/Signup"
+        style="@style/Widget.MaterialComponents.Button.TextButton" />
+</RelativeLayout>
